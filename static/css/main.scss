@@ -5,6 +5,7 @@
 @import "../Airis/bootstrap/scss/variables-dark";
 // 4. Включите сюда любые переопределения карт по умолчанию
 
+
 // 5. Include remainder of required parts
 @import "../Airis/bootstrap/scss/maps";
 @import "../Airis/bootstrap/scss/mixins";
@@ -22,19 +23,46 @@
 @import "../Airis/bootstrap/scss/utilities/api";
 // 8. Добавьте сюда дополнительный пользовательский код
 
+// Блок описания основных цветов схемы:
+// Внутри input формы поиска и т.д.
+$airis_ornge:  #EF7F1A;
+$airis_violet: #7E71B1;
+$airis_black: #2B2A29;
+$airis_white: #fff;
+
+$border-color: blue-300;
+
+
+
+
 $font-stack: Helvetica, sans-serif;
 $primary-color: #e80cbb;
 $custom: #e80cbb;
 $danger: #ff4136;
 
-$custom-colors: ("custom": $custom);
+$custom-colors: ("custom": $airis_violet);
 // Объедините карты
 $theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+input::-webkit-input-placeholder {
+    color: $airis_violet !important;
+    //font:
+}
+input:-moz-placeholder { /* Firefox 18- */
+    color: $airis_violet !important;
+}
+input::-moz-placeholder {  /* Firefox 19+ */
+    color: $airis_violet !important;
+}
+input::-ms-input-placeholder {
+    color: $airis_violet !important;
+}
 
 /* Баннер вверху предупреждает о лимите на заказ = order_limit */
 /* фон */
 .order_limit {
-    background: #EF7F1A;}
+    background: $airis_ornge;}
 /* текст */
 .order_limit_text {
     color: white;
@@ -43,12 +71,19 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 .nav-pills {
     .nav-link {
-        color: $danger;
+        color: $airis_black;
     }
-    .nav-link.active,
-    .show > .nav-link {
-        color: var(--bs-nav-pills-link-active-color);
-        background-color:$custom;
+    .nav-link.active { //,
+    //.show > .nav-link {
+        color: $airis_violet; //var(--bs-nav-pills-link-active-color);
+        //color: $airis_black;
+        font-weight: bold;
+        background-color:$airis_white;
         }
+    .whrite_us {
+        color: $airis_violet;
+        border-color: $airis_violet !important;
+        padding: 2px 22px 2px 22px!important;
+        margin: 5px 0 0 50px;
+    }
 }
-

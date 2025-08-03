@@ -5133,6 +5133,20 @@ progress {
   .d-print-none {
     display: none !important; } }
 
+input::-webkit-input-placeholder {
+  color: #7E71B1 !important; }
+
+input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #7E71B1 !important; }
+
+input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #7E71B1 !important; }
+
+input::-ms-input-placeholder {
+  color: #7E71B1 !important; }
+
 /* Баннер вверху предупреждает о лимите на заказ = order_limit */
 /* фон */
 .order_limit {
@@ -5144,11 +5158,17 @@ progress {
   position: relative; }
 
 .nav-pills .nav-link {
-  color: #ff4136; }
+  color: #2B2A29; }
 
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-  color: var(--bs-nav-pills-link-active-color);
-  background-color: #e80cbb; }
+.nav-pills .nav-link.active {
+  color: #7E71B1;
+  font-weight: bold;
+  background-color: #fff; }
+
+.nav-pills .whrite_us {
+  color: #7E71B1;
+  border-color: #7E71B1 !important;
+  padding: 2px 22px 2px 22px !important;
+  margin: 5px 0 0 50px; }
 
 /*# sourceMappingURL=main.css.map */
