@@ -1,0 +1,54 @@
+//@import "../Airis/bootstrap/scss/bootstrap";
+
+@import "../Airis/bootstrap/scss/functions";
+@import "../Airis/bootstrap/scss/variables";
+@import "../Airis/bootstrap/scss/variables-dark";
+// 4. Включите сюда любые переопределения карт по умолчанию
+
+// 5. Include remainder of required parts
+@import "../Airis/bootstrap/scss/maps";
+@import "../Airis/bootstrap/scss/mixins";
+@import "../Airis/bootstrap/scss/root";
+// 6. При необходимости включите любые другие части
+@import "../Airis/bootstrap/scss/utilities";
+@import "../Airis/bootstrap/scss/reboot";
+@import "../Airis/bootstrap/scss/type";
+@import "../Airis/bootstrap/scss/images";
+@import "../Airis/bootstrap/scss/containers";
+@import "../Airis/bootstrap/scss/grid";
+@import "../Airis/bootstrap/scss/helpers";
+// 7. При желании добавьте API утилит в последнюю очередь, чтобы генерировать классы на основе карты
+// Sass в `_utilities.scss`
+@import "../Airis/bootstrap/scss/utilities/api";
+// 8. Добавьте сюда дополнительный пользовательский код
+
+$font-stack: Helvetica, sans-serif;
+$primary-color: #e80cbb;
+$custom: #e80cbb;
+$danger: #ff4136;
+
+$custom-colors: ("custom": $custom);
+// Объедините карты
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+/* Баннер вверху предупреждает о лимите на заказ = order_limit */
+/* фон */
+.order_limit {
+    background: #EF7F1A;}
+/* текст */
+.order_limit_text {
+    color: white;
+    position: relative;}
+
+
+.nav-pills {
+    .nav-link {
+        color: $danger;
+    }
+    .nav-link.active,
+    .show > .nav-link {
+        color: var(--bs-nav-pills-link-active-color);
+        background-color:$custom;
+        }
+}
+
